@@ -1,27 +1,23 @@
-// Problem 3: Print Even Numbers (Using while Loop) 
+// Question 4: Print Even Numbers from 1 to N 
 // Problem Statement: 
-// Write a Java program that prints all even numbers between 1 and 50 using a while loop.  
-// 1. Create a method printEvenNumbers() that prints all even numbers from 1 to 50. 
-// 2. Use a while loop to iterate from 1 to 50 and print the even numbers. 
-// Sample Output: 
-// 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 
+// Write a Java program that asks the user for a number N and prints all the even numbers from 1 to N using 
+// a for loop. 
+// Sample Input: 
+// Enter a number: 10 
+// Expected Output: 
+// 2 4 6 8 10
+import java.util.Scanner;
 class Even{
-	public void printEvenNumbers(){
-		int num = 1;
-		while(num <= 50)
-		{
-			if(num % 2 == 0)
-			{
-				System.out.print(" "+num+" ");
-			}
-			num++;
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int number = sc.nextInt();
+		int[] arr = new int[number];
+		for(int i =1;i<=number;i++){
+		  if(i % 2 == 0){
+			  System.out.print(" "+i+" ");
+		  }
 		}
 		
 	}
-	public static void main(String args[])
-	{
-		Even obj = new Even();
-		obj.printEvenNumbers();
-	}
-	
 }
